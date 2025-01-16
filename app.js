@@ -2,6 +2,7 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import dotenv from 'dotenv'
 import morgan from 'morgan'
+import cors from 'cors'
 import cardsRoutes from './routes/cards.js'
 
 dotenv.config()
@@ -12,6 +13,8 @@ const customFormat = ':date[iso] :method :url :status'
 const logger = morgan(customFormat)
 
 app.use(logger)
+app.use(cors())
+app.use(express.json())
 
 // Middleware для парсинга JSON
 app.use(bodyParser.json())

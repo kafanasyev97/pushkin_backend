@@ -14,11 +14,12 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-  const { title, content } = req.body
+  const { title, text } = req.body
+
   try {
     const result = await pool.query(
-      'INSERT INTO cards (title, content) VALUES ($1, $2) RETURNING *',
-      [title, content]
+      'INSERT INTO cards (title, text) VALUES ($1, $2) RETURNING *',
+      [title, text]
     )
     res.json(result.rows[0])
   } catch (err) {
