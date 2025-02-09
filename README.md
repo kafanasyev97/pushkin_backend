@@ -11,13 +11,14 @@
 ## Запуск проекта
 
 1. Создать файл .env в корне проекта. Содержимое файла:
-   DB_HOST(хост БД)
-   DB_PORT(порт БД)
-   DB_NAME(имя БД)
-   DB_USERNAME(имя пользователя БД)
-   DB_PASSWORD(пароль пользователя БД)
-   SUPABASE_URL(Опционально: url supabase)
-   SUPABASE_KEY(Опционально: key supabase)
+
+   - DB_HOST(хост БД)
+   - DB_PORT(порт БД)
+   - DB_NAME(имя БД)
+   - DB_USERNAME(имя пользователя БД)
+   - DB_PASSWORD(пароль пользователя БД)
+   - SUPABASE_URL(Опционально: url supabase)
+   - SUPABASE_KEY(Опционально: key supabase)
 
 2. В режиме разработки рекомендуется запускать проект через nodemon командой:
 
